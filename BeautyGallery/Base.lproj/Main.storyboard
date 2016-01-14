@@ -1,25 +1,259 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Lc1-j6-Cam">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--女神画廊-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="PdD-Dx-wMl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zvj-mA-vvL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="女神画廊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipV-a3-Blp">
+                                <rect key="frame" x="139" y="20" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3S-bX-Rb9">
+                                <rect key="frame" x="16" y="81" width="288" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-Gz-qlP">
+                                <rect key="frame" x="137" y="246" width="30" height="30"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CQy-m0-KJu" kind="push" identifier="GoToGallery" id="Ye2-6J-VvZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjy-Bi-Eqs">
+                                <rect key="frame" x="125" y="432" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请选择女神" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-1k-01F">
+                                <rect key="frame" x="16" y="71" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="女神画廊" id="PZW-of-Fb5"/>
+                    <connections>
+                        <outlet property="beautyPicker" destination="i3S-bX-Rb9" id="GrY-UL-MWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="474" y="87"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="ohx-rI-irD">
+            <objects>
+                <viewController id="CQy-m0-KJu" customClass="GalleryViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zeu-nv-AXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEm-Fe-BJk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qqq-L0-3Gn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="kg8-Ds-2sG">
+                                <rect key="frame" x="-560" y="-120" width="1440" height="900"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkM-g3-Bml">
+                                <rect key="frame" x="24" y="29" width="30" height="30"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tEY-ZX-ACG" kind="unwind" unwindAction="close:" id="EVd-Eb-ZB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dLR-eP-E6n">
+                        <barButtonItem key="rightBarButtonItem" title="分享" id="bxA-Rv-ztJ">
+                            <connections>
+                                <action selector="shareTapped:" destination="CQy-m0-KJu" id="Fea-mD-8hI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="beautyImage" destination="kg8-Ds-2sG" id="Wch-Kn-6Vp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuh-ZG-LZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tEY-ZX-ACG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="87"/>
+        </scene>
+        <!--中国-->
+        <scene sceneID="LpG-vW-8eW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXD-2K-lVW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="中国" image="tabbar-icon-1" badgeValue="8" id="0TN-Zn-sbJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjK-4F-fdq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RAm-n1-u8o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAK-cz-2Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="87"/>
+        </scene>
+        <!--日本-->
+        <scene sceneID="dSB-mQ-DI2">
+            <objects>
+                <viewController id="AQt-Ev-iGe" customClass="KoreanViewController" customModule="BeautyGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T9V-cY-CQP"/>
+                        <viewControllerLayoutGuide type="bottom" id="8QC-Y7-xxM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TOd-VL-tKA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="eNr-69-iE3">
+                                <rect key="frame" x="16" y="40" width="288" height="362"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4c-uj-bd6">
+                                <rect key="frame" x="16" y="428" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="LZW-G9-Gn8"/>
+                                    <constraint firstAttribute="height" constant="51" id="kdY-4c-p7c"/>
+                                </constraints>
+                                <state key="normal" image="fa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="AQt-Ev-iGe" eventType="touchUpInside" id="d8M-jA-9V1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-dQ-LWZ">
+                                <rect key="frame" x="253" y="428" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="Sav-Fm-5qK"/>
+                                    <constraint firstAttribute="height" constant="51" id="yML-qD-mSJ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="si">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboTapped:" destination="AQt-Ev-iGe" eventType="touchUpInside" id="t4D-rG-hGi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-1J-9oo">
+                                <rect key="frame" x="135" y="428" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="dMF-jY-iMU"/>
+                                    <constraint firstAttribute="height" constant="51" id="mdB-Jl-qwY"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tw">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterTappad:" destination="AQt-Ev-iGe" eventType="touchUpInside" id="dTP-AB-fjb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOJ-dQ-LWZ" firstAttribute="trailing" secondItem="TOd-VL-tKA" secondAttribute="trailingMargin" id="7Sb-8c-QMR"/>
+                            <constraint firstItem="8QC-Y7-xxM" firstAttribute="top" secondItem="rUV-1J-9oo" secondAttribute="bottom" constant="40" id="ORM-Xq-IbT"/>
+                            <constraint firstItem="eNr-69-iE3" firstAttribute="trailing" secondItem="TOd-VL-tKA" secondAttribute="trailingMargin" id="TtF-xa-01Y"/>
+                            <constraint firstItem="eNr-69-iE3" firstAttribute="top" secondItem="T9V-cY-CQP" secondAttribute="bottom" constant="20" id="ZlW-rt-41o"/>
+                            <constraint firstItem="E4c-uj-bd6" firstAttribute="leading" secondItem="TOd-VL-tKA" secondAttribute="leadingMargin" id="jim-xy-8WC"/>
+                            <constraint firstItem="8QC-Y7-xxM" firstAttribute="top" secondItem="bOJ-dQ-LWZ" secondAttribute="bottom" constant="40" id="loq-ky-DZp"/>
+                            <constraint firstAttribute="centerX" secondItem="rUV-1J-9oo" secondAttribute="centerX" id="nCF-ZF-anE"/>
+                            <constraint firstItem="eNr-69-iE3" firstAttribute="leading" secondItem="TOd-VL-tKA" secondAttribute="leadingMargin" id="ngj-yW-ds5"/>
+                            <constraint firstItem="8QC-Y7-xxM" firstAttribute="top" secondItem="eNr-69-iE3" secondAttribute="bottom" constant="117" id="uMJ-GS-5gt"/>
+                            <constraint firstItem="8QC-Y7-xxM" firstAttribute="top" secondItem="E4c-uj-bd6" secondAttribute="bottom" constant="40" id="wbh-7a-pHb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="日本" image="tabbar-icon-2" id="7BG-hJ-Kum"/>
+                    <connections>
+                        <outlet property="beautyImage" destination="eNr-69-iE3" id="oZA-e5-aA0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ev3-Xz-qex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="773"/>
+        </scene>
+        <!--韩国-->
+        <scene sceneID="qhh-ZZ-NWF">
+            <objects>
+                <viewController id="Qy4-92-HAZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gpf-90-EJM"/>
+                        <viewControllerLayoutGuide type="bottom" id="ify-lH-tP1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qn1-db-a1b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="33" translatesAutoresizingMaskIntoConstraints="NO" id="9cV-Vh-mk5">
+                                <rect key="frame" x="2" y="89" width="320" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="韩国" image="tabbar-icon-5" id="a7s-hi-YK7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPY-Bh-Ja3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="1441"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sbD-oz-IJm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lc1-j6-Cam" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VVs-qK-vC9">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UXD-2K-lVW" kind="relationship" relationship="viewControllers" id="ZQa-lF-sIv"/>
+                        <segue destination="AQt-Ev-iGe" kind="relationship" relationship="viewControllers" id="hT4-ju-Anv"/>
+                        <segue destination="Qy4-92-HAZ" kind="relationship" relationship="viewControllers" id="UfT-kg-TfA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ve-o2-FGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="931"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="11" width="320" height="480"/>
+        <image name="22" width="320" height="480"/>
+        <image name="33" width="320" height="480"/>
+        <image name="fa" width="102" height="102"/>
+        <image name="si" width="102" height="102"/>
+        <image name="tabbar-icon-1" width="64" height="49"/>
+        <image name="tabbar-icon-2" width="64" height="49"/>
+        <image name="tabbar-icon-5" width="64" height="49"/>
+        <image name="tw" width="102" height="102"/>
+    </resources>
 </document>

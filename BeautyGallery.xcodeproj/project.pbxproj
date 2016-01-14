@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EE322771B90B96300CE8F8A /* KoreanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE322761B90B96300CE8F8A /* KoreanViewController.swift */; };
 		8EE9248D1B906A75009461AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9248C1B906A75009461AD /* AppDelegate.swift */; };
 		8EE9248F1B906A75009461AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9248E1B906A75009461AD /* ViewController.swift */; };
 		8EE924921B906A75009461AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE924901B906A75009461AD /* Main.storyboard */; };
 		8EE924941B906A75009461AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE924931B906A75009461AD /* Images.xcassets */; };
 		8EE924971B906A75009461AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE924951B906A75009461AD /* LaunchScreen.xib */; };
 		8EE924A31B906A76009461AD /* BeautyGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE924A21B906A76009461AD /* BeautyGalleryTests.swift */; };
+		8EE924AD1B907046009461AD /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE924AC1B907046009461AD /* ViewControllerExtension.swift */; };
+		8EE924AF1B907368009461AD /* galleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE924AE1B907368009461AD /* galleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EE322761B90B96300CE8F8A /* KoreanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoreanViewController.swift; sourceTree = "<group>"; };
 		8EE924871B906A75009461AD /* BeautyGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautyGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE9248B1B906A75009461AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE9248C1B906A75009461AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		8EE9249C1B906A76009461AD /* BeautyGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautyGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE924A11B906A76009461AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE924A21B906A76009461AD /* BeautyGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyGalleryTests.swift; sourceTree = "<group>"; };
+		8EE924AC1B907046009461AD /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		8EE924AE1B907368009461AD /* galleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			children = (
 				8EE9248C1B906A75009461AD /* AppDelegate.swift */,
 				8EE9248E1B906A75009461AD /* ViewController.swift */,
+				8EE924AC1B907046009461AD /* ViewControllerExtension.swift */,
+				8EE924AE1B907368009461AD /* galleryViewController.swift */,
+				8EE322761B90B96300CE8F8A /* KoreanViewController.swift */,
 				8EE924901B906A75009461AD /* Main.storyboard */,
 				8EE924931B906A75009461AD /* Images.xcassets */,
 				8EE924951B906A75009461AD /* LaunchScreen.xib */,
@@ -156,6 +165,7 @@
 		8EE9247F1B906A75009461AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = xuqidong;
 				TargetAttributes = {
@@ -213,7 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE9248F1B906A75009461AD /* ViewController.swift in Sources */,
+				8EE322771B90B96300CE8F8A /* KoreanViewController.swift in Sources */,
+				8EE924AF1B907368009461AD /* galleryViewController.swift in Sources */,
 				8EE9248D1B906A75009461AD /* AppDelegate.swift in Sources */,
+				8EE924AD1B907046009461AD /* ViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeautyGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BeautyGallery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,6 +426,7 @@
 				8EE924A81B906A76009461AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EE924A91B906A76009461AD /* Build configuration list for PBXNativeTarget "BeautyGalleryTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +435,7 @@
 				8EE924AB1B906A76009461AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
